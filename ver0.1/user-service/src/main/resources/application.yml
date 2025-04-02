@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: user-service
+
+  config:
+    import: configserver:${SPRING_CLOUD_CONFIG_URI}
+
+  cloud:
+    config:
+      fail-fast: ${SPRING_CLOUD_CONFIG_FAIL_FAST}

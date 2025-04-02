@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      uri: http://config-service-1:8888/
+      fail-fast: false
+      retry:
+        max-attempts: 20
+        initial-interval: 1500
+        multiplier: 1.5
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-1:8761/eureka/
